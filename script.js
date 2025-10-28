@@ -3,7 +3,9 @@ gsap.registerPlugin(DrawSVGPlugin);
 // Khóa cuộn trang khi preloader đang hoạt động
 gsap.set("body", { overflow: "hidden" });
 
-const loaderNumber = document.querySelector(".loader-number");
+const firstLoaderNumber = document.querySelector(".first-loader-number");
+const secondLoaderNumber = document.querySelector(".second-loader-number");
+const loaderNumber = document.querySelectorAll(".first-loader-number, .second-loader-number");
 const loaderLogo = document.querySelector(".loader-logo");
 const logoPaths = document.querySelectorAll(".loader-logo path");
 const preloader = document.querySelector(".preloader");
@@ -18,27 +20,38 @@ const slideEase = "power2.out";
 const slideEaseOut = "power2.in";
 
 // Đảm bảo số bắt đầu ở vị trí 0
-tl.set(loaderNumber, { y: "0%" });
+tl.set(firstLoaderNumber, { y: "0%" });
+tl.set(secondLoaderNumber, { y: "0%" });
 
 // --- Chuyển sang "25" ---
-tl.to(loaderNumber, { y: "-100%", duration: slideDuration, ease: slideEaseOut }, "+=0.4"); // "+=0.4" tức là sau khi animation trước kết thúc thì 0.4 giây sau mới bắt đầu animation này
-tl.set(loaderNumber, { innerText: "25", y: "100%" });
-tl.to(loaderNumber, { y: "0%", duration: slideDuration, ease: slideEase });
+tl.to(firstLoaderNumber, { y: "-100%", duration: slideDuration, ease: slideEaseOut }, "+=0.4");
+tl.to(secondLoaderNumber, { y: "-100%", duration: slideDuration, ease: slideEaseOut }, "-=0.2"); // "-=0.2" tức là animation này bắt đầu trước khi animation trước đó kết thúc 0.2 giây
+tl.set(firstLoaderNumber, { innerText: "2", y: "100%" });
+tl.set(secondLoaderNumber, { innerText: "5", y: "100%" });
+tl.to(firstLoaderNumber, { y: "0%", duration: slideDuration, ease: slideEase });
+tl.to(secondLoaderNumber, { y: "0%", duration: slideDuration, ease: slideEase }, "-=0.2");
 
-// --- Chuyển sang "65" ---
-tl.to(loaderNumber, { y: "-100%", duration: slideDuration, ease: slideEaseOut }, "+=0.3");
-tl.set(loaderNumber, { innerText: "65", y: "100%" });
-tl.to(loaderNumber, { y: "0%", duration: slideDuration, ease: slideEase });
+// --- Chuyển sang "67" ---
+tl.to(firstLoaderNumber, { y: "-100%", duration: slideDuration, ease: slideEaseOut }, "+=0.4");
+tl.to(secondLoaderNumber, { y: "-100%", duration: slideDuration, ease: slideEaseOut }, "-=0.2"); // "-=0.2" tức là animation này bắt đầu trước khi animation trước đó kết thúc 0.2 giây
+tl.set(firstLoaderNumber, { innerText: "6", y: "100%" });
+tl.set(secondLoaderNumber, { innerText: "7", y: "100%" });
+tl.to(firstLoaderNumber, { y: "0%", duration: slideDuration, ease: slideEase });
+tl.to(secondLoaderNumber, { y: "0%", duration: slideDuration, ease: slideEase }, "-=0.2");
 
 // --- Chuyển sang "98" ---
-tl.to(loaderNumber, { y: "-100%", duration: slideDuration, ease: slideEaseOut }, "+=0.4");
-tl.set(loaderNumber, { innerText: "98", y: "100%" });
-tl.to(loaderNumber, { y: "0%", duration: slideDuration, ease: slideEase });
+tl.to(firstLoaderNumber, { y: "-100%", duration: slideDuration, ease: slideEaseOut }, "+=0.4");
+tl.to(secondLoaderNumber, { y: "-100%", duration: slideDuration, ease: slideEaseOut }, "-=0.2"); // "-=0.2" tức là animation này bắt đầu trước khi animation trước đó kết thúc 0.2 giây
+tl.set(firstLoaderNumber, { innerText: "9", y: "100%" });
+tl.set(secondLoaderNumber, { innerText: "8", y: "100%" });
+tl.to(firstLoaderNumber, { y: "0%", duration: slideDuration, ease: slideEase });
+tl.to(secondLoaderNumber, { y: "0%", duration: slideDuration, ease: slideEase }, "-=0.2");
 
 // --- Chuyển sang "99" ---
-tl.to(loaderNumber, { y: "-100%", duration: slideDuration, ease: slideEaseOut }, "+=0.2");
-tl.set(loaderNumber, { innerText: "99", y: "100%" });
-tl.to(loaderNumber, { y: "0%", duration: slideDuration, ease: slideEase });
+tl.to(secondLoaderNumber, { y: "-100%", duration: slideDuration, ease: slideEaseOut }, "+=0.4");
+tl.set(secondLoaderNumber, { innerText: "9", y: "100%" });
+tl.to(secondLoaderNumber, { y: "0%", duration: slideDuration, ease: slideEase });
+
 
 
 // -----------------------------------------------------

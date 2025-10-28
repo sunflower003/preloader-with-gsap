@@ -26,11 +26,11 @@ body {
     height: 10vw;
     line-height: 10vw;
     overflow: hidden;
-    display: inline-block;
+    display: flex;
     position: relative;
 }
 
-.loader-number {
+.first-loader-number, .second-loader-number {
     font-size: 10vw;
     font-weight: 500;
     opacity: 1;
