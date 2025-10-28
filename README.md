@@ -5,7 +5,7 @@ Building a Smooth Preloader Animation with GSAP
 <img width="1710" height="1107" alt="image" src="https://github.com/user-attachments/assets/fbfd67b8-48e4-4f32-9534-2473863e7b85" />
 
 
-[Demo]([https://gsap-infinite-parallax-carousel.vercel.app/](https://preloader-with-gsap.vercel.app/)
+[Demo]([https://preloader-with-gsap.vercel.app/])
 
 ## Installation
 
