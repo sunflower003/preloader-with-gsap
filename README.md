@@ -19,4 +19,4 @@ Run this demo on a [local server](https://developer.mozilla.org/en-US/docs/Learn
 
 ## Misc
 
-Follow _Author_: GitHub](https://github.com/sunflower003)
+Follow _Author_: [GitHub](https://github.com/sunflower003)
